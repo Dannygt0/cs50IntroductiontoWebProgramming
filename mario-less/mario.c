@@ -18,8 +18,6 @@ int main(void) // Main function, it asks you for the amout of levels you want
             printf("\n");
         }
     }
-    else
-        printf("Not a valid number , plese enter a number between 1-99\n");
 }
 
 void print_pyramid_row (int amount, int height) // This prints how many rows and spaces we need for the pyramid
