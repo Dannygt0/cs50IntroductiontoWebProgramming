@@ -9,7 +9,7 @@ void print_pyramid_row(int amount, int height);
 int main(void) // Main function, it asks you for the amout of levels you want
 {
     int height = get_int("What height do you want ");
-    printf("Height: %i\n", MAX_VALUE);
+    printf("Height: %i\n", height);
     if (height > MIN_VALUE && height < MAX_VALUE)
     {
         for (int i = 1; i <= height; i++)
@@ -24,7 +24,7 @@ int main(void) // Main function, it asks you for the amout of levels you want
 
 void print_pyramid_row (int amount, int height) // This prints how many rows and spaces we need for the pyramid
 {
-    for (int i = MIN_VALUE; i < height; i++) // Prints empty Spaces
+    for (int i = MIN_VALUE; i < height - amount ; i++) // Prints empty Spaces
     {
         printf(" ");
     }
