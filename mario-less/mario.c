@@ -2,14 +2,14 @@
 #include <stdio.h>
 
 const int MAX_VALUE = 100;
-const int MIN_VALUE = 1;
+const int MIN_VALUE = 0;
 
 void print_pyramid_row(int amount, int height);
 
 int main(void) // Main function, it asks you for the amout of levels you want
 {
     int height = get_int("What height do you want ");
-    if (height >= MIN_VALUE && height < MAX_VALUE)
+    if (height > MIN_VALUE && height < MAX_VALUE)
     {
         for (int i = 1; i <= height; i++)
         {
