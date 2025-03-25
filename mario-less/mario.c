@@ -12,7 +12,7 @@ int main(void) // Main function, it asks you for the amout of levels you want
     printf("Height: %i\n", MAX_VALUE);
     if (height > MIN_VALUE && height < MAX_VALUE)
     {
-        for (int i = height; i > MIN_VALUE; i--)
+        for (int i = 1; i <= height; i++)
         {
             print_pyramid_row(i, height);
             printf("\n");
