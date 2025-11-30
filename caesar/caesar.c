@@ -25,7 +25,7 @@ char rotate_char(char c, int k)
 {
     if (isalpha (c))
     {
-        char base = is upper(c) ? 'A' : 'a';
+        char base = isupper(c) ? 'A' : 'a';
         int p_i = c -base;
         int c_i = (p_i + k) % 26;
         char cipher_char = c_i + base;
@@ -50,6 +50,14 @@ int main (int arg, string argv[])
         return 1;
     }
     int k = atoi(argv[1]);
-    string plaintext = get_string(")
-
+    //Ask for the text
+    string plaintext = get_string("plaintext: ");
+    // Show the encripted text
+    printf("cipher text: ");
+    for (int i = 0, n = strlen(plaintext); i < n; i++)
+    {
+        char cipher_char = rotate_char(plaintext[i],  k);
+        printf("%c", cipher_char);
+    }
+    return 0;
 }
