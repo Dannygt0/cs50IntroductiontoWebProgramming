@@ -59,5 +59,6 @@ int main (int argc, string argv[])
         char cipher_char = rotate_char(plaintext[i],  k);
         printf("%c", cipher_char);
     }
+    printf("\n");
     return 0;
 }
