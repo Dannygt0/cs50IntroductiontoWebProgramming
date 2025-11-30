@@ -39,7 +39,7 @@ char rotate_char(char c, int k)
 
 int main (int argc, string argv[])
 {
-    if (arg != 2)
+    if (argc != 2)
     {
         printf("Usage: ./caesar key\n");
             return 1;
