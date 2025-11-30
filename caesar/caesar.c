@@ -44,7 +44,7 @@ int main (int arg, string argv[])
         printf("Usage: ./caesar key\n");
             return 1;
     }
-    if (!only_digits(argv[1]))
+    if (!is_numeric_string(argv[1]))
     {
         printf("Usage: ./caesar key\n");
         return 1;
