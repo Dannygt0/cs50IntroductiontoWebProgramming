@@ -37,7 +37,7 @@ char rotate_char(char c, int k)
     }
 }
 
-int main (int arg, string argv[])
+int main (int argc, string argv[])
 {
     if (arg != 2)
     {
