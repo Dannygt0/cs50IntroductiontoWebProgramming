@@ -39,5 +39,15 @@ char rotate_char(char c, int k)
 
 int main (int arg, string argv[])
 {
-    
+    if (arg != 2)
+    {
+        printf("Usage: ./caesar key\n");
+            return 1;
+    }
+    if (!only_digits(argv[1]))
+    {
+        printf("Usage: ./caesar key\n");
+        ret
+    }
+
 }
