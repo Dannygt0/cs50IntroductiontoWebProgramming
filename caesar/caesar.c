@@ -53,7 +53,7 @@ int main (int arg, string argv[])
     //Ask for the text
     string plaintext = get_string("plaintext: ");
     // Show the encripted text
-    printf("cipher text: ");
+    printf("ciphertext: ");
     for (int i = 0, n = strlen(plaintext); i < n; i++)
     {
         char cipher_char = rotate_char(plaintext[i],  k);
