@@ -1,6 +1,6 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 
 const int BLOCK_SIZE = 512;
 
@@ -27,30 +27,31 @@ int main(int argc, char *argv[])
 
     while (fread(buffer, 1, BLOCK_SIZE, card) == BLOCK_SIZE)
     {
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff&&(buffer[3] & 0xf0) == 0xe0)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
+            (buffer[3] & 0xf0) == 0xe0)
         {
             if (out != NULL)
             {
                 fclose(out);
             }
-        sprintf(filename, "%03i.jpg", count);
-        out = fopen(filename, "w");
-        if (out == NULL)
-        {
-            fclose(card);
-            return 1;
+            sprintf(filename, "%03i.jpg", count);
+            out = fopen(filename, "w");
+            if (out == NULL)
+            {
+                fclose(card);
+                return 1;
+            }
+            count++;
         }
-        count++;
+        if (out != NULL)
+        {
+            fwrite(buffer, 1, BLOCK_SIZE, out);
+        }
     }
     if (out != NULL)
     {
-        fwrite(buffer, 1, BLOCK_SIZE, out);
+        fclose(out);
     }
-}
-if (out != NULL)
-{
-    fclose(out);
-}
-fclose(card);
-return 0;
+    fclose(card);
+    return 0;
 }
