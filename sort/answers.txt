@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: because when I ran it on sorted5000.txt, it finished right away (0.01s)
+
+sort2 uses: Merge Sort
+
+How do you know?: When I ran it on sorted on sorted5000.txt, it ended in under 1s. Shows an efficient O(n log n)
+
+sort3 uses: Selection Sort
+
+How do you know?: When I ran it on the same file on sorted5000.txt, took over 10s, which indicated a not very effective algorithm.
