@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
     uint8_t buffer[BLOCK_SIZE];
 
-    FILE *out = null;
+    FILE *out = NULL;
     int count = 0;
     char filename[8];
 
