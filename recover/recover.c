@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 const int BLOCK_SIZE = 512;
 
@@ -17,7 +18,7 @@ int main(int argc, char *argv[])
         printf("Could not get access to file.\n");
         return 1;
     }
-    
+
     uint8_t buffer[BLOCK_SIZE];
 
     FILE *out = null;
