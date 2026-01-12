@@ -7,9 +7,9 @@ for char in text:
      letters += 1
     elif char == " ":
         words +=1
-    elif char == "." or char == "!" or char == char "?":
+    elif char == "." or char == "!" or char == "?":
         sentences +=1
 
 print(letters)
 print(words)
-print(Sentences)
+print(sentences)
