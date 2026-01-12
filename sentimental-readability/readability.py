@@ -12,8 +12,8 @@ for char in text:
         sentences +=1
 
 l = 100 * (letters / words)
-s = 100 * ()
-index = 0.0588 *(letters / 100) - 0.296 * (sentences / 100) - 15.8
+s = 100 * sentences
+index = 0.0588 * l - 0.296 * s - 15.8
 print(letters)
 print(words)
 print(sentences)
