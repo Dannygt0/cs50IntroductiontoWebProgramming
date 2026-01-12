@@ -15,7 +15,10 @@ l = 100 * (letters / words)
 s = 100 * (sentences / words)
 index = 0.0588 * l - 0.296 * s - 15.8
 grade = round(index)
-print(letters)
-print(words)
-print(sentences)
-print(grade)
+
+if grade => 16:
+    print("Grade 16+")
+elif grade < 1:
+   print("Before Grade 1")
+else :
+    print(f"Grade {grade}")
