@@ -11,7 +11,8 @@ for char in text:
     elif char == "." or char == "!" or char == "?":
         sentences +=1
 
-L100 * (letters / words)
+l = 100 * (letters / words)
+s = 100 * ()
 index = 0.0588 *(letters / 100) - 0.296 * (sentences / 100) - 15.8
 print(letters)
 print(words)
