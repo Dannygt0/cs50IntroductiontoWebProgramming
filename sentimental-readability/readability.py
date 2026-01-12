@@ -10,6 +10,8 @@ for char in text:
         words +=1
     elif char == "." or char == "!" or char == "?":
         sentences +=1
+
+L100 * (letters / words)
 index = 0.0588 *(letters / 100) - 0.296 * (sentences / 100) - 15.8
 print(letters)
 print(words)
