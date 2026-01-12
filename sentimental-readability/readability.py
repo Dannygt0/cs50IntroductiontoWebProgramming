@@ -4,6 +4,8 @@ words = 0
 for char in text:
     if char .isalpha():
      letters += 1
-     
+    elif char .isequal(" "):
+        words +=1
 
 print(letters)
+print(words)
