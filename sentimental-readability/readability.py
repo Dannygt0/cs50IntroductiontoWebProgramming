@@ -5,7 +5,7 @@ sentences = 0
 
 for char in text:
     if char .isalpha():
-     letters += 1
+        letters += 1
     elif char == " ":
         words += 1
     elif char == "." or char == "!" or char == "?":
