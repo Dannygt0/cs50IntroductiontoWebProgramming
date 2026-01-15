@@ -16,3 +16,5 @@ JOIN atm_transactions ON bank_accounts.account_number = atm_transactions.account
 WHERE atm_location = 'Leggett Street' AND transaction_type = 'withdraw' AND year = 2025 AND month = 7 AND day = 28
 INTERSECT SELECT name FROM people JOIN phone_calls ON people.phone_number = phone_calls.caller
 WHERE year = 2025 AND month = 7 AND day = 28 AND duration < 60;
+
+SELECT id, hour, minute FROM flights WHERE year = 2025 AND month = 7 AND day = 29 ORDER BY hour, minute LIMIT 1;
