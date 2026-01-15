@@ -18,3 +18,7 @@ INTERSECT SELECT name FROM people JOIN phone_calls ON people.phone_number = phon
 WHERE year = 2025 AND month = 7 AND day = 28 AND duration < 60;
 
 SELECT id, hour, minute FROM flights WHERE year = 2025 AND month = 7 AND day = 29 ORDER BY hour, minute LIMIT 1;
+
+SELECT name FROM people  JOIN passengers ON people.passport_number = passengers.passport_number WHERE passengers.flight_id = 36;
+
+
