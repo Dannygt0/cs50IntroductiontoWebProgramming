@@ -22,3 +22,7 @@ SELECT id, hour, minute FROM flights WHERE year = 2025 AND month = 7 AND day = 2
 SELECT name FROM people  JOIN passengers ON people.passport_number = passengers.passport_number WHERE passengers.flight_id = 36;
 
 
+SELECT name FROM people WHERE phone_number = (  SELECT receiver FROM phone_calls WHERE caller = (SELECT phone_number FROM people WHERE name = 'Bruce') AND day = 28 AND month = 7 AND year = 2025 AND duration < 60 );
+
+SELECT city FROM airports WHERE id = 36;
+
