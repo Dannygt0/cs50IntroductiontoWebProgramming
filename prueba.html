@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <script>
+            function slugSeparator(slug) {
+                var regEx = /[^a-zA-Z0-9-]/;
+                for (let i = 0; i < slug.length; i++) {
+                    if (regEx.test(slug[i])) {
+                        return null;
+                    }
+                }
+                let palabras = slug.split("-")
+                let primera = palabras[0].toLowerCase();
+                let resultado = primera
+
+                for (let i = 1; i< palabras.length; i++){
+                let transformado = (palabras[i][0].toUpperCase()) + (palabras[i].slice(1));
+                    resultado += transformado;
+                }
+                return resultado;
+
+            }
+            console.log(slugSeparator("this-is-test"));
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>
