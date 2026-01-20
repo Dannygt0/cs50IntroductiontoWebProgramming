@@ -26,7 +26,17 @@
                     });
                 }
                 let freetext = document.querySelector('#feedback2');
-
+                let checkButton = document.querySelector('#check');
+                let inputField = document.querySelector('input');
+                checkButton.addEventListener('click', function() {
+                    if (inputField.value.toLowerCase() === 'fertilizer'){
+                    inputField.style.backgroundColor = 'green';
+                    freetext.innerHTML = 'correct';
+                }else {
+                    inputField.style.backgroundColor = 'red';
+                    freetext.innerHTML = 'Incorrect';
+                }
+            });
             });
 
         </script>
@@ -58,9 +68,9 @@
                 <h3>In the 1980s, New Zealand sheep were famously "subsidized," meaning the government paid farmers for
                     every sheep they owned. When these subsidies were abruptly canceled in the mid-80s, what surprising
                     thing did farmers do with their sheep?</h3>
-                    <input type='text'></input>
-                    <button id= 'Check'>Submit your answer</button>
-                    <p id="feedback2"></p>
+                <input type='text'></input>
+                <button id='check'>Submit your answer</button>
+                <p id="feedback2"></p>
             </div>
         </div>
     </body>
