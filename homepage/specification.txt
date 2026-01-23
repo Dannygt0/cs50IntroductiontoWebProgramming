@@ -1,0 +1,23 @@
+10 HTML Tags Used:
+
+1. <html>: The main for the documents on each page
+2. <head>: The main for the documents on each  and has the metada, links to the CSS and other libraries
+3. <body>:The main for the documents on each and what it is in it
+4. <div>:To optimize layout
+5. <h1>:Main titles
+6. <ul>:navigation menus
+7. <a>: To create links
+8. <img>:To add an image in this case my profile picture
+9. <p>: For larger text or paragraphs
+10. <table>: To organize in a table with rows and columns the information
+
+5 CSS Properties Used:
+1. background-color: Apply as color to the background in this case blue
+2. color: For texts so that they can be readable
+3. font-family:To define the fonts
+4. text-align:To aling the text in this case justify
+5. border-color: The color of borders between the document
+
+JavaScript and Bootstrap Usage:
+
+I used bootstrap to copy styles and work along with CSS to get the visual feelings I wanted for this website

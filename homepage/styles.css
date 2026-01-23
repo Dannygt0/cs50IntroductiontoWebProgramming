@@ -1,0 +1,27 @@
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    font-family: sans-serif;
+}
+
+h1, h2, h5 {
+    color: #38bdf8;
+}
+
+.nav-link {
+    color: #94a3b8 !important;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #38bdf8 !important;
+}
+
+hr {
+    border-color: #1e293b;
+    opacity: 1;
+}
+
+p {
+    color: #cbd5e1;
+    text-align: justify;
+}
