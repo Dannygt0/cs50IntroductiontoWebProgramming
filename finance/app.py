@@ -44,6 +44,12 @@ def buy():
     if request.method == "POST"
         symbol = request.form.get("symbol")
         shares = request.form.get("symbol")
+        if not symbol:
+            return apology("must provide symbol")
+        if not shares:
+            return apology("must provide shares")
+        if not shares.isdigit() or int(shares) <= 0:
+            return apology("shares must be a positive number")
     else:
 
         return render_templante("buy.html")
