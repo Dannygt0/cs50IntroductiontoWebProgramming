@@ -50,6 +50,15 @@ def buy():
             return apology("must provide shares")
         if not shares.isdigit() or int(shares) <= 0:
             return apology("shares must be a positive number")
+        stock = lookup(symbol)
+        if not stock:
+            return("invalid symbol")
+        total_cost = int(shares) * stock["price"]
+        rows = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        user_cash = rows[0]["cash"]
+        if user_cash < total_cost:
+            return apology("can not afford")
+        return redirect("/")
     else:
 
         return render_template("buy.html")
