@@ -41,9 +41,9 @@ def index():
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
-    if request.method == "POST"
+    if request.method == "POST":
         symbol = request.form.get("symbol")
-        shares = request.form.get("symbol")
+        shares = request.form.get("shares")
         if not symbol:
             return apology("must provide symbol")
         if not shares:
@@ -52,7 +52,7 @@ def buy():
             return apology("shares must be a positive number")
     else:
 
-        return render_templante("buy.html")
+        return render_template("buy.html")
 
 
 @app.route("/history")
