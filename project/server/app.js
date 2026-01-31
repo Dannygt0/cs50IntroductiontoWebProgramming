@@ -7,5 +7,5 @@ app.listen(3000, () => {
 });
 
 app.get('/', (req, res) => {
-    res.json("Welcome to the Traveler's Portal!");
+    res.json({ message: "Hello from the server!"});
 });
