@@ -5,9 +5,13 @@ function App() {
   const [city, setCity] = useState('');
   const [photos, setPhotos] = useState([]);
 
-  const searchCity = async () => await axios.get(`https://reimagined-journey-pj9gpv5q69wrh767x-3000.app.github.dev/photos?query=${city}`){
-    const response = setPhotos(response.data)
+  const searchCity = async () => await axios.get(`https://reimagined-journey-pj9gpv5q69wrh767x-3000.app.github.dev/photos?query=${city}`);
+  {
+    setPhotos(response.data);
+  } catch (error){
+    console.error('Error fetching photos: error);
   }
+}
 
 
   return (
