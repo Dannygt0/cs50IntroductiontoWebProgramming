@@ -1,9 +1,10 @@
+/* Contenedor principal */
 .App {
   text-align: center;
-  padding: 50px;
+  padding: 40px;
   background-color: #f0f2f5;
   min-height: 100vh;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1 {
@@ -11,12 +12,18 @@ h1 {
   margin-bottom: 30px;
 }
 
+/* Buscador */
+.search-container {
+  margin-bottom: 40px;
+}
+
 input {
-  padding: 12px;
+  padding: 12px 20px;
   width: 300px;
   border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px;
+  border-radius: 25px 0 0 25px;
   outline: none;
+  font-size: 16px;
 }
 
 button {
@@ -24,8 +31,9 @@ button {
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 25px 25px 0;
   cursor: pointer;
+  font-size: 16px;
   transition: background 0.3s;
 }
 
@@ -33,47 +41,53 @@ button:hover {
   background-color: #0056b3;
 }
 
+/* Rejilla de fotos */
 .photo-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px; /* Espacio entre tarjetas */
   margin-top: 40px;
 }
 
-.photo-grid img {
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-  object-fit: cover;
-}
-
-.photo-grid img:hover {
-  transform: scale(1.05);
-}
-/* This styles the container for the image and text */
+/* La Tarjeta (Aquí es donde se controla que no se pasen las descripciones) */
 .photo-card {
   background: white;
+  width: 300px; /* Ancho fijo para que todas sean iguales */
   border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  width: 300px;
+  overflow: hidden; /* Corta cualquier cosa que se salga de la tarjeta */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column; /* Alinea imagen arriba y texto abajo */
   transition: transform 0.3s;
 }
 
 .photo-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
 
-/* This styles the text specifically */
+/* Estilo de la imagen dentro de la tarjeta */
+.photo-card img {
+  width: 100%;
+  height: 250px; /* Altura fija para la imagen */
+  object-fit: cover; /* Recorta la imagen para que llene el espacio sin deformarse */
+}
+
+/* Estilo del texto */
 .photo-description {
   padding: 15px;
+  margin: 0;
   font-size: 14px;
-  color: #555;
-  text-transform: capitalize;
-  /* This prevents long descriptions from breaking the layout */
+  color: #444;
+  text-align: left;
+  line-height: 1.4;
+  background-color: white;
+
+  /* Truco para que el texto no se pase:
+     Si la descripción es muy larga, pone "..." al final de la segunda línea */
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
