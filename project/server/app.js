@@ -1,11 +1,11 @@
 require('dotenv').config();
 const express = require('express');
-const app = express();
 const axios = require('axios');
 const cors = require('cors');
 
-app.use(cors());
+const app = express();
 
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.json({ message: "Hello from the server!"});
