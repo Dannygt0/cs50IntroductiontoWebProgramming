@@ -89,10 +89,14 @@ button:hover {
   line-height: 1.4;
   background-color: white;
 
-  /* Bloquea el desbordamiento de texto */
+  /* Control de líneas para compatibilidad máxima */
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Máximo 2 líneas de texto */
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* Límite para navegadores basados en Webkit/Blink */
+
+  /* Propiedad estándar (futura compatibilidad) */
+  line-clamp: 2;
+
   overflow: hidden;
   text-overflow: ellipsis;
 }
