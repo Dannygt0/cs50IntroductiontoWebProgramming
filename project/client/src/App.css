@@ -1,4 +1,4 @@
-
+/* Contenedor principal: Centra todo y da un fondo suave */
 .App {
   text-align: center;
   padding: 40px;
@@ -10,11 +10,14 @@
 h1 {
   color: #1a1a1a;
   margin-bottom: 30px;
+  font-weight: 700;
 }
 
-/* Buscador */
+/* Buscador: Estilo moderno redondeado */
 .search-container {
   margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 input {
@@ -34,6 +37,7 @@ button {
   border-radius: 0 25px 25px 0;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 600;
   transition: background 0.3s;
 }
 
@@ -41,6 +45,7 @@ button:hover {
   background-color: #0056b3;
 }
 
+/* Rejilla de fotos: Organiza las tarjetas de forma flexible */
 .photo-grid {
   display: flex;
   flex-wrap: wrap;
@@ -49,29 +54,32 @@ button:hover {
   margin-top: 40px;
 }
 
-
+/* La Tarjeta: Contenedor rígido para evitar que el texto se pase */
 .photo-card {
   background: white;
-  width: 300px;
+  width: 300px; /* Todas las tarjetas miden lo mismo */
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .photo-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
-
+/* Imagen: Mantiene un tamaño constante sin deformarse */
 .photo-card img {
   width: 100%;
   height: 250px;
   object-fit: cover;
+  display: block;
 }
 
+/* Descripción: Limita el texto a 2 renglones y añade "..." */
 .photo-description {
   padding: 15px;
   margin: 0;
@@ -81,24 +89,9 @@ button:hover {
   line-height: 1.4;
   background-color: white;
 
+  /* Bloquea el desbordamiento de texto */
   display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.photo-description {
-  padding: 15px;
-  margin: 0;
-  font-size: 14px;
-  color: #444;
-  text-align: left;
-  line-height: 1.4;
-  background-color: white;
-
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 2; /* Máximo 2 líneas de texto */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
