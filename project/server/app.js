@@ -1,16 +1,24 @@
+require('dotenv').config();
 const express = require('express');
-
 const app = express();
+const axios = require('axios');
+const cors = require('cors');
 
+app.use(cors());
 
 
 app.get('/', (req, res) => {
     res.json({ message: "Hello from the server!"});
 });
 
-app.get('/city/:name', (req, res) => {
-    const cityName = req.params.name;
-    res.json({ message: `You are looking for info about ${cityName}` });
+app.get('/city/:name', async (req, res) => {
+    try {
+        const cityName = req.params.name;
+        const response = await axios.get(`https://api.unsplash.com/search/photos?query=${cityName}&client_id=${process.env.UNSPLASH_ACCESS_KEY}`);
+        res.json(response.data.results[0]);
+    } catch (error) {
+        res.status(500).json({ error: "Something went wrong" });
+    }
 });
 
 app.listen(3000, () => {
