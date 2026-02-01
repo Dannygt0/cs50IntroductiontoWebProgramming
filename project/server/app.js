@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     res.json({ message: "Hello from the server!"});
 });
 
-app.get('/city/:name', async (req, res) => {
+app.get('/photos', async (req, res) => {
     try {
         const cityName = req.params.name;
         const response = await axios.get(`https://api.unsplash.com/search/photos?query=${cityName}&client_id=${process.env.UNSPLASH_ACCESS_KEY}`);
