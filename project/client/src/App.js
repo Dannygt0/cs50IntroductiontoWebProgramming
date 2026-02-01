@@ -29,15 +29,18 @@ function App() {
 
       <div className="photo-grid">
         {Array.isArray(photos) && photos.map((photo) => (
+          <div key={photo.id} className = "photo-card">
           <img
-            key={photo.id}
             src={photo.urls.small}
             alt={photo.alt_description || 'city'}
             width="300"
             height="300"
           />
-        ))}
+          <p className="photo-description">
+            {photo.description || photo.alt_description || "A beautiful view of the city"}
+          </p>
       </div>
+        ))}
     </div>
   );
 }
