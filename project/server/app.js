@@ -17,6 +17,7 @@ app.get('/photos', async (req, res) => {
         const response = await axios.get(`https://api.unsplash.com/search/photos?query=${cityName}&client_id=${process.env.UNSPLASH_ACCESS_KEY}`);
         res.json(response.data.results[0]);
     } catch (error) {
+        console.error(error);
         res.status(500).json({ error: "Something went wrong" });
     }
 });
@@ -24,5 +25,3 @@ app.get('/photos', async (req, res) => {
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
 });
-
-app.use(cors());
