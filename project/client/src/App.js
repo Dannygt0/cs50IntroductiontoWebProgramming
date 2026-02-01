@@ -36,16 +36,25 @@ function App() {
               width="300"
               height="300"
             />
-            <p className="photo-description">
-              {(() =>)
-              let text = photo.description || photo.alt_description || "A beautiful view of the city";
-              text = text.trim();
-              text = text.charAt(0).toUpperCase() + text.slice(1);
-              if(!text.endsWith('.'))
-              text += '.';
-              }
-              return text;
-            </p>
+<p className="photo-description">
+  {(() => {
+    // 1. Obtenemos el texto
+    let text = photo.description || photo.alt_description || "A beautiful view of the city";
+
+    // 2. Limpieza básica
+    text = text.trim();
+
+    // 3. Primera letra en Mayúscula
+    text = text.charAt(0).toUpperCase() + text.slice(1);
+
+    // 4. Asegurar el punto final
+    if (!text.endsWith('.')) {
+      text += '.';
+    }
+
+    return text;
+  })()} {/* <--- ESTOS paréntesis finales son la clave para que no dé error */}
+</p>
           </div>
         ))}
       </div>
