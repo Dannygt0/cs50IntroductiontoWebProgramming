@@ -19,7 +19,7 @@ function App() {
     < div >
       <input value={city} onChange={(e) => setCity(e.target.value)}/>
       <button onClick={searchCity}>Submit</button>
-      {photos.map((photo) => (<img key= {photo.id} src={photo.urls.small} alt= {Description of the City || 'city'}/>))}
+      {photos.map((photo) => (<img key= {photo.id} src={photo.urls.small} alt= {photo.alt_description || 'city'}/>))}
     </div >
   );
 }
