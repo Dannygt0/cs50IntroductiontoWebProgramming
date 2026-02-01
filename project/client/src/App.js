@@ -38,7 +38,7 @@ function App() {
             />
             <p className="photo-description">
               {(() =>)
-              let text = photo.description || photo.alt_description || "A beautiful view of the city"}
+              let text = photo.description || photo.alt_description || "A beautiful view of the city";
               text = text.trim();
               text = text.charAt(0).toUpperCase() + text.slice(1);
               if(!text.endsWith('.'))

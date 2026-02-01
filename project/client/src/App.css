@@ -1,4 +1,4 @@
-/* Contenedor principal */
+
 .App {
   text-align: center;
   padding: 40px;
@@ -41,24 +41,23 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Rejilla de fotos */
 .photo-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px; /* Espacio entre tarjetas */
+  gap: 25px;
   margin-top: 40px;
 }
 
-/* La Tarjeta (Aquí es donde se controla que no se pasen las descripciones) */
+
 .photo-card {
   background: white;
-  width: 300px; /* Ancho fijo para que todas sean iguales */
+  width: 300px;
   border-radius: 15px;
-  overflow: hidden; /* Corta cualquier cosa que se salga de la tarjeta */
+  overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   display: flex;
-  flex-direction: column; /* Alinea imagen arriba y texto abajo */
+  flex-direction: column;
   transition: transform 0.3s;
 }
 
@@ -66,14 +65,13 @@ button:hover {
   transform: translateY(-10px);
 }
 
-/* Estilo de la imagen dentro de la tarjeta */
+
 .photo-card img {
   width: 100%;
-  height: 250px; /* Altura fija para la imagen */
-  object-fit: cover; /* Recorta la imagen para que llene el espacio sin deformarse */
+  height: 250px;
+  object-fit: cover;
 }
 
-/* Estilo del texto */
 .photo-description {
   padding: 15px;
   margin: 0;
@@ -83,8 +81,22 @@ button:hover {
   line-height: 1.4;
   background-color: white;
 
-  /* Truco para que el texto no se pase:
-     Si la descripción es muy larga, pone "..." al final de la segunda línea */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.photo-description {
+  padding: 15px;
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+  text-align: left;
+  line-height: 1.4;
+  background-color: white;
+
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
