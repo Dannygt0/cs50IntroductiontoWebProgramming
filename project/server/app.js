@@ -15,7 +15,7 @@ app.get('/photos', async (req, res) => {
     try {
         const cityName = req.query.query;
         const response = await axios.get(`https://api.unsplash.com/search/photos?query=${cityName}&client_id=${process.env.UNSPLASH_ACCESS_KEY}`);
-        res.json(response.data.results[0]);
+        res.json(response.data.results);
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: "Something went wrong" });
