@@ -11,15 +11,22 @@ function App() {
       setPhotos(response.data);
     } catch (error) {
       console.error('Error fetching photos: error');
-  }
+    }
   };
 
 
   return (
     < div >
-      <input value={city} onChange={(e) => setCity(e.target.value)}/>
+      <input value={city} onChange={(e) => setCity(e.target.value)} />
       <button onClick={searchCity}>Submit</button>
-      {photos.map((photo) => (<img key= {photo.id} src={photo.urls.small} alt= {photo.alt_description || 'city'}/>))}
+      {Array.isArray(photos) && photos.map((photo) => (
+        <img
+        key={photo.id}
+        src={photo.urls.small}
+        alt={photo.alt_description || 'city'}
+        style={{width: '300px', margin: '10px'}}
+        />
+        ))}
     </div >
   );
 }
