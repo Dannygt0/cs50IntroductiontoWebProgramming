@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Eye on the World 🌍
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Full Stack Web Application | CS50 Introduction to Computer Science Final Project**
 
-## Available Scripts
+Eye on the World is a high-performance React application that allows users to explore the globe through high-quality photography. By integrating with a custom backend and the Unsplash API, it provides a seamless experience for discovering, saving, and sharing city-specific imagery.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+### 🚀 Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Dynamic City Search:** Real-time photo fetching via custom API endpoints.
+- **Persistent Favorites Album:** Users can "capture" moments and save them to a personal album, persisted using **LocalStorage**.
+- **Interactive Modal System:** Detailed view for each photo with background scroll locking and UI animations.
+- **Social Integration & Downloads:** Direct links to share images on social platforms (X, Facebook, Instagram) and force-download capabilities.
+- **Dynamic UI/UX:** Includes heart animations on save, "flash" screen effects, and automated text formatting for photo descriptions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🛠️ Technical Stack
 
-### `npm test`
+- **Frontend:** React.js (Functional Components & Hooks).
+- **State Management:** `useState` for UI flow and `useEffect` for lifecycle events and persistence.
+- **Data Fetching:** `Axios` for handling asynchronous HTTP requests to the backend.
+- **Styling:** Custom CSS3 with a dark-mode aesthetic and modal overlays.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+### 📂 Technical Highlights (Code Quality)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Persistence:** Implementation of `JSON.parse(localStorage.getItem(...))` to ensure user data survives page refreshes.
+- **Clean UI Logic:** Use of `document.body.style.overflow` to manage window scrolling during modal interactions—a mark of attention to UX detail.
+- **Error Handling:** Robust try/catch blocks and user-facing alerts for API connectivity issues.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ⚙️ Installation & Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Dannygt0/cs50IntroductiontoWebProgramming.git](https://github.com/Dannygt0/cs50IntroductiontoWebProgramming.git)s
