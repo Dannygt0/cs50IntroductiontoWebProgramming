@@ -30,8 +30,7 @@ function App() {
   const searchCity = async () => {
     if (!city) return alert("Please enter a city name");
     try {
-      const response = await axios.get(`https://reimagined-journey-pj9gpv5q69wrh767x-3000.app.github.dev/photos?query=${city}`);
-      setPhotos(response.data);
+      const response = await axios.get(`https://eye-world-api.onrender.com/photos?query=${city}`);
       setShowFavorites(false);
       if (response.data.length === 0) alert("No photos found!");
     } catch (error) {
