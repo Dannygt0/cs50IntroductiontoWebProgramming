@@ -27,10 +27,15 @@ function App() {
     }
   }, [selectedPhoto]);
 
-  const searchCity = async () => {
+const searchCity = async () => {
     if (!city) return alert("Please enter a city name");
     try {
       const response = await axios.get(`https://eye-world-api.onrender.com/photos?query=${city}`);
+      
+      // --- ESTA ES LA LÍNEA QUE FALTA ---
+      setPhotos(response.data); 
+      // ----------------------------------
+
       setShowFavorites(false);
       if (response.data.length === 0) alert("No photos found!");
     } catch (error) {
